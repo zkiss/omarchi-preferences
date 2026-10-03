@@ -1,0 +1,9 @@
+#!/bin/sh
+# Detach a command while preserving arguments, including paths with spaces.
+if [ "$#" -eq 0 ]; then
+  printf 'Usage: fork <command> [args...]\n' >&2
+  exit 2
+fi
+(
+  nohup "$@" </dev/null >/dev/null 2>&1 &
+) >/dev/null 2>&1

@@ -1,0 +1,3 @@
+# Plugin ID, Git URL, branch (- means the repository default).
+zoltan.auto-nightlight https://github.com/zkiss/omarchy-nightlight.git -
+piyush.omaswitch https://github.com/zkiss/omaswitch.git fix/alt-release-commit

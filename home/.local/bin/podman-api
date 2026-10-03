@@ -1,0 +1,2 @@
+#!/bin/sh
+exec podman system service --time=0 unix:/tmp/podman.sock

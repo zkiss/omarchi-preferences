@@ -1,0 +1,2 @@
+# Mode and path relative to /. Applied only with --system.
+644 etc/systemd/logind.conf.d/30-custom-keys.conf

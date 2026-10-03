@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+base=${1:-main}
+branch=$(git rev-parse --abbrev-ref HEAD)
+git diff "$base...$branch" -- > work.diff

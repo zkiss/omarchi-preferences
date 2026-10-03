@@ -1,0 +1,7 @@
+*.bak
+*.swp
+*~
+.DS_Store
+# These are deployment sources, even if a global ignore excludes *.local.
+!home/.local/
+!home/.local/**
