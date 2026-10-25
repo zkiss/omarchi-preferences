@@ -1,4 +1,0 @@
-# Omarchy environment and interactive shell defaults.
-[[ -r /usr/share/omarchy/default/bash/env-bootstrap ]] && source /usr/share/omarchy/default/bash/env-bootstrap
-[[ $- != *i* ]] && return
-source "${OMARCHY_PATH:-/usr/share/omarchy}/default/bash/rc"

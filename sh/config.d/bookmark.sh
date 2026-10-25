@@ -24,29 +24,3 @@ s() {
   [[ $# == 1 ]] || { printf 'Usage: s <bookmark-label>\n' >&2; return 2; }
   bookmark -l "$1" -d "$PWD"
 }
-
-# Use Node 24 through nvm when available; otherwise use the installed codex.
-codex() {
-  if declare -F nvm >/dev/null; then
-    nvm exec 24 codex "$@"
-  else
-    command codex "$@"
-  fi
-}
-
-if [[ -n ${IDEA_CMD:-} ]]; then
-  idea() { fork "$IDEA_CMD" "$@"; }
-fi
-
-if [[ -n ${CURSOR_CMD:-} ]]; then
-  cursor() {
-    # Accept an executable path (including spaces), or the old command + flags form.
-    if [[ -x $CURSOR_CMD ]]; then
-      fork "$CURSOR_CMD" "$@"
-    else
-      local -a cursor_command
-      read -r -a cursor_command <<< "$CURSOR_CMD"
-      fork "${cursor_command[@]}" "$@"
-    fi
-  }
-fi

@@ -1,0 +1,6 @@
+alias du='du -h'
+alias df='df -h'
+alias '?'='du --max-depth 1 2>/dev/null'
+alias la='ls -A'
+alias les='less --shift=10 --hilite-unread --chop-long-lines'
+alias running='ps -ef | grep -- "$USER"'

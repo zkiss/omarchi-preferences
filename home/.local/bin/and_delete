@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# Read newline-separated paths; confirm the deletion command before executing it.
-xargs --no-run-if-empty --delimiter='\n' --interactive rm -i -rf --
